@@ -1,75 +1,19 @@
 ---
 title: "R Fundamentals - Part 1 of 4: Introduction"
 output: html_notebook
+editor_options: 
+  chunk_output_type: console
 ---
+```{r}
+library(here)
+source(here("source","get_lib.R"))
+```
 
-📝 **Poll:** Have you attended a D-Lab workshop before? Answer in the Zoom poll.
-
-## Learning Objectives
-
-Welcome to Part 1 of the R Fundamentals series. Our goals for today's workshop are:
-
-1.  Demonstrate how to navigate R-Studio.
-
-2.  Define what R is useful and not useful for.
-
-3.  Use code to create variables and vectors.
-
-Throughout this workshop series, we will use the following icons:
-
-🔔 **Question**: A quick question to help you understand what's going on.
-
-🥊 **Challenge**: Interactive exercise. We'll go through these in the workshop!
-
-⚠️ **Warning**: Heads-up about tricky stuff or common mistakes.
-
-💡 **Tip**: How to do something a bit more efficiently or effectively.
-
-📝 **Poll**: A zoom poll to help you learn.
-
-🎬 **Demo**: Showing off something more advanced so you know what you can use R for in the future
-
-## Navigating RStudio
-
-RStudio is the interface in which we use the programming language R. By default, RStudio is organized with four panels:
-
-1.  Script or notebook (upper left): This is where you write, edit and run code. You will spend most of your time in this panel.
-
-2.  Console (lower left): You can use the console to enter R commands on the fly (they will not be saved). Output from code run in the script (above) will appear here.
-
-3.  Global Environment (upper right): Saved variables, functions, and other R objects will appear here.
-
-4.  Misc (lower right): A variety of other tabs which allow you to navigate your file system, view plots, install packages, view help, etc.
-
-### Opening a Notebook
-
-In this workshop, we will write and run code from an **R Notebook**. You can open a new notebook by clicking File --\> New File --\> R Notebook.
-
-⚠️ **Warning**: **R notebooks** are a different file type than **R scripts**. Notebooks are great for data analysis and visualization, when the goal is to both run code and communicate results to others (and yourself) with text. Scripts are great for data cleaning, when the goal is to create cleaned data that you will later analyse.
-
-💡 **Tip:** Click the **Visual** button in the top left of the toolbar to view the notebook in a more readable format.
-
-💡 **Tip:** Click the **Outline** button in the top right of the toolbar to see a navigation panel for the notebook.
-
-### Writing and Running Code
-
-You can write **text** directly into a notebook, as you would a Word Document. To write **code** you need to create a code chunk. You can do this in three ways:
-
-1\. Code --\> Insert Chunk
-
-2\. Use the keyboard shortcut **Ctrl + Alt + I** (windows) or **Cmd + Option + I** (mac) (I = the letter "i")
-
-3\. [if running the notebook in "Visual" rather than "Source"] Type **/** (forward slash) and a drop down menu should appear. Select R Code Chunk
-
-You can run code inside a code chunk in two ways:
-
-1.  Click the small green play button at the top right of the chunk - this will run all the code inside the chunk.
-
-2.  Use the keyboard shortcut **Shift + Ctrl + Enter** (windows) or **Shift + Cmd + Enter** (mac) - this will run all the code inside the chunk. Alternatively, click the "Run" button in the top right corner of the *notebook* *panel* and select "Run Current Chunk" from the dropdown list.
-
-3.  Use the keyboard shortcut **Ctrl + Enter** (windows) or **Cmd + Enter** (mac) - this will run the single line of code your cursor is on. Alternatively, click the "Run" button in the top right corner of the *notebook* *panel* and select "Run Selected Line(s)" from the dropdown list.
+# Writing and Running Code
 
 ```{r}
+# ctrl + alt + i  : code chunk
+
 # Inside code chunks, text lines need to be started with a # (hashtag)
 
 # You can use R like a giant calculator! 
