@@ -4,6 +4,7 @@ output: html_notebook
 editor_options: 
   chunk_output_type: console
 ---
+
 ```{r}
 library(here)
 source(here("source","get_lib.R"))
@@ -17,69 +18,7 @@ source(here("source","get_lib.R"))
 # Inside code chunks, text lines need to be started with a # (hashtag)
 
 # You can use R like a giant calculator! 
-2 + 3
-```
-
-💡 **Tip:** Writing **comments** about your code is very important. The best practice is to write **why** you are doing something, not just **what** you are doing.
-
-### 🥊 Challenge 1: Create and Run a Chunk of Code
-
-Use the two methods above to create a chunk of code. In the chunk, experiment with writing and running some math. Remember to comment your code.
-
-💡 **Tip:** You can save this notebook with your answers to the challenges and any notes you take throughout the workshop. Click the 💾 icon in the toolbar or select File --\> Save.
-
-## Why use R?
-
-R is a programming language designed for **data analysis**. R is great for data cleaning, data visualization, and statistical analysis, among other things.
-
-R is **not** a general purpose programming language. If you want to do something like build a website or train a machine learning model, languages such as [Python](https://github.com/dlab-berkeley/Python-Fundamentals-Pilot) are better suited for these tasks.
-
-🔔 **Question:** What tasks would you like to use R for? How do you envision using R in your research or class projects? **Put your answer in the chat.**
-
-## Creating Variables
-
-Variables are objects that hold values. Variables can be inside data sets (like columns in an excel sheet) or standalone objects. The syntax for creating a variable is:
-
--   Left hand side is the variable name.
-
--   Next is the **assignment** **operator**: `<-`
-
--   Right hand side is the value to assign to that variable.
-
-```{r}
-# a variable that gives the year 
-year <- 2023
-
-# print out the value
-year
-```
-
-We can read the above code as "create a variable called year and assign to it the value 2023".
-
-Variables can hold different types of values.
-
-```{r}
-# assign a numeric value to the variable year
-year <- 2023
-
-# assign a character value to the variable country
-country <- "Mexico"
-
-# assign a numeric value to the variable lifeexp
-lifeexp <- 76.2
-
-```
-
-⚠️ **Warning**: We will talk about different types of variables (numeric, characters, categorical) in Part 2.
-
-### 🥊 Challenge 2: Creating Variables
-
-Create a variable called `continent` and assign it the value "Americas". Create a variable called `pop` and assign it the value 4.5.
-
-```{r}
-
-
-
+a <- 2 + 3
 ```
 
 All variables created show up in the Global Environment (top right panel).
@@ -87,22 +26,11 @@ All variables created show up in the Global Environment (top right panel).
 ```{r}
 # print a list of all variables in your environment
 ls()
-```
-
-You can remove variables from the global environment.
-
-```{r}
 
 # remove a single variable
-rm(year)
+rm(a)
 
-# remove all variables in the global environment
-rm(list = ls())
 ```
-
-⚠️ **Warning**: You cannot undo removing a variable. You must instead re-create the variable.
-
-If you want to rename a variable, the easiest thing to do is create a variable with the new name and remove the old variable.
 
 ```{r}
 # variable storing the population of Mexico
@@ -119,6 +47,9 @@ rm(pop)
 
 # print out a list of current variables
 ls()
+
+# remove all variables in the global environment
+rm(list = ls())
 ```
 
 💡 **Tip:** `ls()` and `rm()` are both **functions**, which are commands that generate some output. We will learn several functions across the workshop. The best way to learn and remember functions in R is to Google them or ask ChatGPT!
