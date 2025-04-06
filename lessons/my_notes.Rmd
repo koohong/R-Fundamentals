@@ -2,7 +2,16 @@
 title: "Untitled"
 author: "Bill"
 date: "`r Sys.Date()`"
-output: html_document
+output:
+  html_document:
+    toc: true
+    toc_depth: 3
+    toc_float: 
+      collapsed: false
+      smooth_scroll: false
+      number_sections: true
+      fig_caption: TRUE
+    css: "style.css"
 editor_options: 
   chunk_output_type: console
 ---
@@ -12,6 +21,13 @@ knitr::opts_chunk$set(echo = FALSE)
 library(here)
 source(here("source","get_lib.R"))
 ```
+
+<style>
+.table-hover > tbody > tr:hover { 
+  background-color: #f4f442;
+}
+</style>
+
 
 # Gapminder
 
@@ -35,7 +51,9 @@ my_ten <- unique(gap$country)[1:10]
 
 ```{r}
 # select columns
-gap %>% select(c("pop","year")) %>% head()
+gap %>% select(c("pop","year")) %>% head() %>% 
+  kable("html") %>% 
+  kable_styling(bootstrap_options = c("striped", "hover"))
 
 # select year, pop, and lifeExp from the dataset 
 gap_subset <- gap %>% select(year, pop, lifeExp)
